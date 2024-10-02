@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <title>SPS Links</title>
+    <style>
+        :root {
+            --main-colour: red;
+            --accent-colour: crimson;
+            --rows: 1;
+            --columns: 5;
+            --gap: 10px;
+            --box-width: 120px;
+            --box-height: 120px;
+            --original-rows: 1;
+            --original-columns: 5;
+            --original-box-width: 120px;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: var(--main-colour);
+        }
+
+        div.container {
+            display: grid;
+            grid-template-columns: repeat(var(--columns), 1fr);
+            grid-template-rows: repeat(var(--rows), 1fr);
+            --col-gaps: calc(var(--columns) - 1);
+            --col-gap-width: calc(var(--gap) * var(--col-gaps));
+            --col-width: calc(var(--columns) * var(--box-width));
+            width: calc(var(--col-gap-width) + var(--col-width));
+            --row-gaps: calc(var(--rows) - 1);
+            --row-gap-height: calc(var(--gap) * var(--row-gaps));
+            --row-height: calc(var(--rows) * var(--box-height));
+            height: calc(var(--row-gap-height) + var(--row-height));
+        }
+
+        .cell {
+            width: var(--box-width);
+            height: var(--box-height);
+            border: 1px solid;
+            box-sizing: border-box;
+            border-color: var(--accent-colour);
+            border-radius: 10px;
+            border-width: 2px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .cell p {
+            font-size: 30px;
+            font-family: Nunito;
+            font-weight: bold;
+            color: hsl(0, 0%, 80%);
+            margin: 0;
+            text-decoration: none;
+        }
+
+        .cell .sub {
+            color: rgba(204, 204, 204, 0.8);
+            font-size: 15px;
+            position: absolute;
+            bottom: 5px;
+            z-index: 2;
+        }
+
+        .cell img {
+            height: 50px;
+            z-index: 1;
+        }
+
+        div.all {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="container">
+            <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fclassroom.google.com%2F&flowEntry=ServiceLogin&flowName=GlifWebSignIn&hd=stpaulsschool.org.uk&ifkv=ARpgrqfQgKH_rUfq5LnniOLJ8rS0O-D2JJ2ctSbp-mEdvNCg5RAMfaKQdSqVEQCSO55X6siOWxOn9w&rip=1&sacu=1&dsh=S756008421%3A1727905863399963&ddm=0" target="_blank" class="cell">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/2372px-Google_Classroom_Logo.svg.png"></img>
+                <p class="sub">Classroom</p>
+            </a>
+            <a href="https://intranet.stpaulsschool.org.uk/" target="_blank" class="cell">
+                <img src="https://pbs.twimg.com/profile_images/1139573850457411584/UK_bt0Ys_400x400.png"></img>
+                <p class="sub">Intranet</p>
+            </a>
+            <a href="https://webmail.stpaulsschool.org.uk/owa/" target="_blank" class="cell">
+                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2023/04/outlook-2013-logo-freelogovectors.net_.png"></img>
+                <p class="sub">Outlook</p>
+            </a>
+            <a href="https://www.socscms.com/login/232/pupil" target="_blank" class="cell">
+                <img src="https://media.licdn.com/dms/image/v2/D4E0BAQHDDXVo2o_CrA/company-logo_200_200/company-logo_200_200/0/1698850603232/schools_sports_ltd_logo?e=2147483647&v=beta&t=1o1w8pR7DsI3XK4LdxzE8IrAZqI2fqvB9NOiTtvv3LA"></img>
+                <p class="sub">SOCS</p>
+            </a>
+            <a href="https://pupils.stpaulsschool.org.uk/" target="_blank" class="cell">
+                <img style="height: 70px;" src="https://d3bh3xcwife49w.cloudfront.net/e0f2832ameeb2e70atcb59d4e7s9483a4ae/St_Pauls_School.png"></img>
+                <p class="sub">Pupil Portal</p>
+            </a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    const randomColour = (() => {
+        const randomInt = (min, max) => {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+
+        return () => {
+            var h = randomInt(0, 360);
+            var s = randomInt(42, 98);
+            var l = randomInt(20, 35);
+            return `hsl(${h},${s}%,${l}%)`;
+        };
+    })();
+
+    function createAccentColour(hsl) {
+        if (typeof hsl !== 'string') {
+            throw new Error("Input must be a string");
+        }
+
+        const hslRegex = /^hsl\(\s*(\d+),\s*(\d+)%,\s*(\d+)%\s*\)$/;
+        const match = hsl.match(hslRegex);
+
+        if (!match) {
+            throw new Error("Invalid HSL color format");
+        }
+
+        let [_, h, s, l] = match;
+        h = parseInt(h, 10);
+        s = parseInt(s, 10);
+        l = parseInt(l, 10);
+
+        let accentHue = (h) % 360;
+        let accentSaturation = Math.min(100, s + 20);
+        let accentLightness = Math.max(0, l - 15);
+
+        return `hsl(${accentHue}, ${accentSaturation}%, ${accentLightness}%)`;
+    }
+
+    let body = document.querySelector('body');
+    let r = document.querySelector(':root');
+
+    let c = randomColour();
+    let a = createAccentColour(c);
+    r.style.setProperty('--main-colour', c);
+    r.style.setProperty('--accent-colour', a);
+
+    function updateScreen() {
+        if (screen.width < 500) {
+            r.style.setProperty('--rows', window.getComputedStyle(document.documentElement).getPropertyValue('--original-columns'));
+            r.style.setProperty('--columns', window.getComputedStyle(document.documentElement).getPropertyValue('--original-rows'));
+        } else {
+            r.style.setProperty('--rows', window.getComputedStyle(document.documentElement).getPropertyValue('--original-rows'));
+            r.style.setProperty('--columns', window.getComputedStyle(document.documentElement).getPropertyValue('--original-columns'));
+        }
+    }
+
+    body.onresize = updateScreen;
+</script>
+
+</html>
+
+<!-- 
+intranet
+google classroom
+webmail2016
+socs
+pupil portal
+-->
