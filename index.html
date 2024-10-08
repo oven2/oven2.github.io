@@ -10,13 +10,14 @@
         rel="stylesheet">
     <title>SPS Links</title>
     <link rel="icon" type="image/x-icon" href="https://d3bh3xcwife49w.cloudfront.net/e0f2832ameeb2e70atcb59d4e7s9483a4ae/St_Pauls_School.png">
+    <script src="https://cdn.jsdelivr.net/gh/alohe/maker-tag@1.0.1/dist/mwl.min.js"></script>
     <style>
         :root {
             --main-colour: red;
             --accent-colour: crimson;
             --rows: 2;
             --columns: 3;
-            --gap: 10px;
+            --gap: 20px;
             --box-width: 120px;
             --box-height: 120px;
             --original-rows: 1;
@@ -178,6 +179,16 @@
     }
 
     body.onresize = updateScreen;
+
+    new MakerTag({
+        text: "Feedback?",
+        link: "https://forms.gle/rQR9btgXVkg6itiy8",
+        background: "radial-gradient(circle at left, #180c99 0%, #0c5e99 50%, #3b0c99 100%)",
+        font: {
+            size:"15px",
+        },
+        padding: "20px 30px",
+    });
 </script>
 
 </html>
@@ -188,4 +199,5 @@ google classroom
 webmail2016
 socs
 pupil portal
+lunch menu
 -->
