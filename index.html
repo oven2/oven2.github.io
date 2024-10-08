@@ -48,7 +48,7 @@
         .cell {
             width: var(--box-width);
             height: var(--box-height);
-            border: 1px solid;
+            /*border: 1px solid;*/
             box-sizing: border-box;
             border-color: var(--accent-colour);
             border-radius: 10px;
@@ -140,6 +140,9 @@
             var h = randomInt(0, 360);
             var s = randomInt(42, 98);
             var l = randomInt(20, 35);
+            if (h > 20 && h < 60) {
+                return randomColour();
+            }
             return `hsl(${h},${s}%,${l}%)`;
         };
     })();
@@ -175,6 +178,8 @@
     let a = createAccentColour(c);
     r.style.setProperty('--main-colour', c);
     r.style.setProperty('--accent-colour', a);
+
+    console.log(c)
 
     function updateScreen() {
         if (screen.width < 500) {
