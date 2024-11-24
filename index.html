@@ -15,13 +15,19 @@
         :root {
             --main-colour: red;
             --accent-colour: crimson;
+
             --rows: 3;
-            --columns: 3;
+            --columns: 4;
+            
+            --original-rows: 3;
+            --original-columns: 4;
+
+            --mobile-rows: 4;
+            --mobile-columns: 3;
+
             --gap: 20px;
             --box-width: 120px;
             --box-height: 120px;
-            --original-rows: 1;
-            --original-columns: 5;
             --original-box-width: 120px;
         }
 
@@ -96,27 +102,31 @@
     <div class="all">
         <div class="container">
             <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fclassroom.google.com%2F&flowEntry=ServiceLogin&flowName=GlifWebSignIn&hd=stpaulsschool.org.uk&ifkv=ARpgrqfQgKH_rUfq5LnniOLJ8rS0O-D2JJ2ctSbp-mEdvNCg5RAMfaKQdSqVEQCSO55X6siOWxOn9w&rip=1&sacu=1&dsh=S756008421%3A1727905863399963&ddm=0" target="_blank" class="cell">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/2372px-Google_Classroom_Logo.svg.png"></img>
+                <img src="https://img.icons8.com/color/240/google-classroom.png"></img>
                 <p class="sub">Classroom</p>
             </a>
+            <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fclassroom.google.com%2Fa%2Fnot-turned-in%2Fall&flowEntry=ServiceLogin&flowName=GlifWebSignIn&hd=stpaulsschool.org.uk&ifkv=ARpgrqfQgKH_rUfq5LnniOLJ8rS0O-D2JJ2ctSbp-mEdvNCg5RAMfaKQdSqVEQCSO55X6siOWxOn9w&rip=1&sacu=1&dsh=S756008421%3A1727905863399963&ddm=0" target="_blank" class="cell">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Icons8_flat_todo_list.svg/640px-Icons8_flat_todo_list.svg.png"></img>
+                <p class="sub">Todo</p>
+            </a>
             <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Fu%2F0%2Fr%2Fweek&hd=stpaulsschool.org.uk&ddm=1&emr=1&flowEntry=ServiceLogin&flowName=GlifWebSignIn&followup=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Fu%2F0%2Fr%2Fweek&ifkv=ARpgrqctKIA7tsPiEKgSy--YaLMKgMage2ZSnSVzjVGVLgodZDa933L2ZKq7Pyvv9kB1DDfwAyOHqg&osid=1&passive=1209600&service=cl&dsh=S507155262%3A1728422519823100" target="_blank" class="cell">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/1024px-Google_Calendar_icon_%282020%29.svg.png"></img>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Icons8_flat_calendar.svg/640px-Icons8_flat_calendar.svg.png"></img>
                 <p class="sub">Calendar</p>
             </a>
             <a href="https://accounts.google.com/v3/signin/identifier?hd=stpaulsschool.org.uk&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2F%3Fdmr%3D1%26ec%3Dwgc-drive-globalnav-goto&followup=https%3A%2F%2Fdrive.google.com%2Fdrive%2F%3Fdmr%3D1%26ec%3Dwgc-drive-globalnav-goto&ifkv=ARpgrqeEfMB8tCITA5daCLBFOwewD0a4hWiswJML3BxYqpWWG49u0PnA-PycZyKXretx9ZV2qCW5&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1731111227%3A1728902411214452&ddm=0" target="_blank" class="cell">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png"></img>
+                <img src="https://img.icons8.com/color/240/google-drive--v2.png"></img>
                 <p class="sub">Drive</p>
             </a>
             <a href="https://intranet.stpaulsschool.org.uk/" target="_blank" class="cell">
-                <img src="https://pbs.twimg.com/profile_images/1139573850457411584/UK_bt0Ys_400x400.png"></img>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpQrLMdOmPv-5P8m0lCZKW5iThTyVaTMLShg&s"></img>
                 <p class="sub">Intranet</p>
             </a>
             <a href="https://intranet.stpaulsschool.org.uk/catering" target="_blank" class="cell">
-                <img src="https://pbs.twimg.com/profile_images/1139573850457411584/UK_bt0Ys_400x400.png"></img>
+                <img src="https://img.icons8.com/color/100/restaurant-menu.png"></img>
                 <p class="sub">Lunch Menu</p>
             </a>
             <a href="https://webmail.stpaulsschool.org.uk/owa/" target="_blank" class="cell">
-                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2023/04/outlook-2013-logo-freelogovectors.net_.png"></img>
+                <img src="https://img.icons8.com/color/240/ms-outlook.png"></img>
                 <p class="sub">Outlook</p>
             </a>
             <a href="https://www.socscms.com/login/232/pupil" target="_blank" class="cell">
@@ -126,6 +136,14 @@
             <a href="https://pupils.stpaulsschool.org.uk/" target="_blank" class="cell">
                 <img style="height: 70px;" src="https://d3bh3xcwife49w.cloudfront.net/e0f2832ameeb2e70atcb59d4e7s9483a4ae/St_Pauls_School.png"></img>
                 <p class="sub">Pupil Portal</p>
+            </a>
+            <a href="https://webopac.stpaulsschool.org.uk/cirqa-web-app/" target="_blank" class="cell">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Icons8_flat_reading.svg/768px-Icons8_flat_reading.svg.png"></img>
+                <p class="sub">Library</p>
+            </a>
+            <a href="https://swgfl.org.uk/whisper/sps4/" target="_blank" class="cell">
+                <img src="https://img.icons8.com/color/100/top-secret.png"></img>
+                <p class="sub">Whisper</p>
             </a>
             <a href="https://chromewebstore.google.com/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn" target="_blank" class="cell">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ublock_2015.svg/1024px-Ublock_2015.svg.png"></img>
@@ -186,16 +204,18 @@
     console.log(c)
 
     function updateScreen() {
-        if (screen.width < 500) {
-            r.style.setProperty('--rows', window.getComputedStyle(document.documentElement).getPropertyValue('--original-columns'));
-            r.style.setProperty('--columns', window.getComputedStyle(document.documentElement).getPropertyValue('--original-rows'));
+        if (screen.width < 700) {
+            r.style.setProperty('--rows', window.getComputedStyle(document.documentElement).getPropertyValue('--mobile-rows'));
+            r.style.setProperty('--columns', window.getComputedStyle(document.documentElement).getPropertyValue('--mobile-columns'));
         } else {
             r.style.setProperty('--rows', window.getComputedStyle(document.documentElement).getPropertyValue('--original-rows'));
             r.style.setProperty('--columns', window.getComputedStyle(document.documentElement).getPropertyValue('--original-columns'));
         }
     }
 
-    body.onresize = updateScreen;
+    updateScreen();
+
+    body.addEventListener("resize", updateScreen);
 
     new MakerTag({
         text: "Feedback?",
@@ -208,15 +228,3 @@
 </script>
 
 </html>
-
-<!-- 
-intranet
-google classroom
-webmail2016
-socs
-pupil portal
-lunch menu 
-ublock
-calendar
-drive
--->
